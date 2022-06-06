@@ -20,8 +20,27 @@ module.exports = {
         __dirname,
         "../src/rendering/webgl/programs/common/node.ts",
       ),
+      "sigma/rendering/webgl/programs/common/edge": path.resolve(
+        __dirname,
+        "../src/rendering/webgl/programs/common/edge.ts",
+      ),
       sigma: path.resolve(__dirname, "../src/index.ts"),
+      "apache-arrow": require.resolve("apache-arrow/Arrow.es2015.min")
     },
+    fallback: {
+        url: require.resolve('url'),
+        assert: require.resolve('assert'),
+        crypto: require.resolve('crypto-browserify'),
+        http: require.resolve('stream-http'),
+        https: require.resolve('https-browserify'),
+        os: require.resolve('os-browserify/browser'),
+        buffer: require.resolve('buffer'),
+        stream: require.resolve('stream-browserify'),
+        net: require.resolve('net'),
+        tls: require.resolve('tls'),
+        zlib: require.resolve('zlib'),
+        fs: require.resolve('fs'),
+    }
   },
   module: {
     rules: [

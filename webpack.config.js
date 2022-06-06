@@ -27,7 +27,7 @@ module.exports = [
       filename: production ? "sigma.min.js" : "sigma.js",
       path: path.join(__dirname, "build"),
       library: "Sigma",
-      libraryTarget: "var",
+      libraryTarget: "commonjs2",
     },
     resolve: {
       extensions: [".ts", ".js", ".glsl"],

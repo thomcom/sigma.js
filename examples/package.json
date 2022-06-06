@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm run clean && ./build.js build",
     "clean": "rimraf build",
-    "start": "kotatsu serve $npm_config_example/index.ts --index $npm_config_example/index.html --public / $npm_config_example/public"
+    "start": "kotatsu serve $npm_config_example/index.ts --index $npm_config_example/index.html --public / $npm_config_example/public --port 3002"
   },
   "kotatsu": {
     "config": "webpack.config.js"
@@ -16,6 +16,7 @@
     "@types/file-saver": "^2.0.4",
     "@types/papaparse": "^5.3.1",
     "@types/seedrandom": "^3.0.1",
+    "apache-arrow": "^4.0.0",
     "chroma-js": "^2.1.2",
     "file-saver": "^2.0.5",
     "graphology": "^0.23.2",
@@ -25,10 +26,13 @@
     "graphology-layout": "^0.5.0",
     "graphology-layout-force": "^0.2.3",
     "graphology-layout-forceatlas2": "^0.8.1",
+    "graphology-types": "^0.23.0",
     "iwanthue": "^1.5.1",
     "papaparse": "^5.3.1",
     "seedrandom": "^3.0.5",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "request": "latest"
+
   },
   "devDependencies": {
     "async": "^3.2.2",

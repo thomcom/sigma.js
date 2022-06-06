@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "lib": ["dom", "es2015"],
     "noImplicitAny": false,
     "strict": false,
     "paths": {
@@ -12,9 +13,11 @@
       "sigma/rendering/webgl/programs/edge.fast": ["./src/rendering/webgl/programs/edge.fast.ts"],
       "sigma/rendering/webgl/programs/node.image": ["./src/rendering/webgl/programs/node.image.ts"],
       "sigma/rendering/webgl/programs/common/node": ["./src/rendering/webgl/programs/common/node.ts"],
+      "sigma/rendering/webgl/programs/common/edge": ["./src/rendering/webgl/programs/common/edge.ts"],
       "sigma/rendering/webgl/programs/common/program": ["./src/rendering/webgl/programs/common/program.ts"]
     }
   },
+  "declarations": true,
   "include": ["./external-types/**/*", "./examples/**/*", "./src/**/*"],
   "exclude": []
 }
