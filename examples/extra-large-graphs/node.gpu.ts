@@ -23,7 +23,7 @@ export default class NodeGpuProgram extends AbstractNodeProgram {
   }
 
   process(data, hidden: boolean, offset: number): void {
-    this.array = data.buffer.getColumn('nodes').toArray();
+    this.array = data.buffer.getChild('nodes').toArray();
     POINTS = this.array.length / ATTRIBUTES;
     this.points = POINTS;
   }

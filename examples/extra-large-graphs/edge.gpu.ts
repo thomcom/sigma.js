@@ -64,14 +64,6 @@ export default class EdgeGpuProgram extends AbstractEdgeProgram {
     //nothing to do
   }
 
-  /* The node program for my example
-  process(data, hidden: boolean, offset: number): void {
-    this.array = data.buffer.getColumn('nodes').toArray();
-    POINTS = this.array.length / ATTRIBUTES;
-    this.points = POINTS;
-  }
-  */
-
   process(
     sourceData,
     targetData,
@@ -79,7 +71,7 @@ export default class EdgeGpuProgram extends AbstractEdgeProgram {
     hidden: boolean,
     offset: number,
   ): void {
-    this.array = data.buffer.getColumn('edges').toArray();
+    this.array = data.buffer.getChild('edges').toArray();
     POINTS = this.array.length / ATTRIBUTES;
     this.points = POINTS;
   }

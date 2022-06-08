@@ -23,19 +23,6 @@ import RapidsGraphologyGraph from './rapids-graph'
 
 const rng = seedrandom('sigma');
 (async function() {
-  // 1. Read query string, and set form values accordingly:
-  const query = new URLSearchParams(location.search).entries();
-  for (const [key, value] of query) {
-    const domList = document.getElementsByName(key);
-    if (domList.length === 1) {
-      (domList[0] as HTMLInputElement).value = value;
-    } else if (domList.length > 1) {
-      domList.forEach((dom: HTMLElement) => {
-        const input   = dom as HTMLInputElement;
-        input.checked = input.value === value;
-      });
-    }
-  }
 
   // 2. Read form values to build a full state:
   const state = {

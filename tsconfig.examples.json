@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "lib": ["dom", "es2015"],
     "noImplicitAny": false,
     "strict": false,
     "paths": {
@@ -17,7 +16,6 @@
       "sigma/rendering/webgl/programs/common/program": ["./src/rendering/webgl/programs/common/program.ts"]
     }
   },
-  "declarations": true,
   "include": ["./external-types/**/*", "./examples/**/*", "./src/**/*"],
   "exclude": []
 }

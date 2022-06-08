@@ -26,7 +26,7 @@ export default class RapidsGraphologyGraph extends Graph {
     this._the_node = new Map<string, any>();
     this._the_node['node'] = null;
     this._the_node['hidden'] = false;
-    Object.defineProperty(this, 'order', {value: this._gpu_nodes.length});
+    Object.defineProperty(this, 'order', {value: this._gpu_nodes.numRows});
     Object.defineProperty(this, 'nodeExtent', {value: {x: [0, 5], y: [5, 10]}});
     Object.defineProperty(this, 'nodes', {value: () => {
       this._the_node['node'] = this._gpu_nodes;

@@ -2,11 +2,7 @@
  * This example aims at showcasing sigma's performances.
  */
 
-<<<<<<< HEAD
 import arrow from 'apache-arrow';
-=======
-import {Table} from 'apache-arrow';
->>>>>>> main
 
 async function request(obj) {
   return new Promise((resolve, reject) => {
